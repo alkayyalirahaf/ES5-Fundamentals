@@ -20,6 +20,7 @@ function Employee(employedId,position){
 //Make Employee inherit from Person using Object.create().
 Employee.prototype=object.create(Person.prototype);
 
+
 //Override the greet() method in Employee.prototype.
 Employee.prototype.greet=function(){
     console.log("Hello, I am  employee"); 
