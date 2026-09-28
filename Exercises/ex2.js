@@ -10,7 +10,8 @@ Person.prototype.greet=function(){
 };
 
 //Create an Employee constructor with employeeId and position.
-function Employee(employedId,position){
+function Employee(name,age,employedId,position){
+    Person.call(this,name,age)
     this.employedId=employedId;
     this.position=position;
 
@@ -18,12 +19,12 @@ function Employee(employedId,position){
 
 
 //Make Employee inherit from Person using Object.create().
-Employee.prototype=object.create(Person.prototype);
-
+Employee.prototype = Object.create(Person.prototype);
+Employee.prototype.constructor=Employee;
 
 //Override the greet() method in Employee.prototype.
 Employee.prototype.greet=function(){
-    console.log("Hello, I am  employee"); 
+    console.log("Hello, I am  employee my name "+this.name); 
 };
 
 //Create at least three employees and demonstrate inheritance.
@@ -31,3 +32,5 @@ var employee1 = new Employee("E001", "Software Engineer");
 var employee2 = new Employee("E002", "Project Manager");
 var employee3 = new Employee("E003", "Designer");
 
+console.log(employee1 instanceof Employee);
+console.log(employee1 instanceof Person);
