@@ -9,7 +9,7 @@ const lengthDisplay = document.querySelector("#storageLength"); // Display eleme
 // Constructor function with unique ID fix
 function PersonData(name) {
     this.name = name;
-    this.id = Date.now() + Math.random(); 
+    this.id = Date.now(); 
 }
 
 //  getItem()
@@ -28,6 +28,7 @@ function updateStorageDisplay() {
     //  key(index)
     if (localStorage.length > 0) {
         const firstKeyName = localStorage.key(0);
+        console.log("First Key Name in Storage:", firstKeyName);
     }
 }
 

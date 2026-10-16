@@ -8,8 +8,8 @@ const objectText=JSON.parse(jsonText);
 
 //the converted object 
 console.log(objectText);
-}catch{
-    console.log("invalid JSON");
+} catch (e) {
+    console.log("Invalid JSON:", e.message);
 }
 
 // the original object

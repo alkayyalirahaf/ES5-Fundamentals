@@ -8,6 +8,10 @@ students.push({
     grade: Math.floor(Math.random() * 51) + 50 
   });
 }
+
+
+
+
 //splice() /add
 students.splice(50,0,{id:51,name:"new student",grade:88});
 

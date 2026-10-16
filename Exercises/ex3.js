@@ -73,6 +73,8 @@ var studentExists = students.includes("Ahmad");
 console.log(studentExists);
 
 // forEach() to print every student with their index.
-students.forEach(function(student,index){
+students.forEach(
+    function(student,index){
     console.log(index + ": " + student);
-});
+}
+);

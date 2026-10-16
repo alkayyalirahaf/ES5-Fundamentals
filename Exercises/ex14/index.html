@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+
+    <h2>To-Do List Application</h2>
+
+    <form id="todoForm">
+        <input type="text" id="taskInput" placeholder="Enter a new task..." required />
+        <button type="submit" id="addBtn">Add Task</button>
+        <button type="button" id="clearBtn">Clear All Tasks</button>
+    </form>
+
+    <!-- Display the total number of tasks -->
+    <p>Total Tasks: <strong id="taskCount">0</strong></p>
+
+    <!-- List to display tasks -->
+    <ul id="taskList"></ul>
+
+    <script src="app.js"></script>
+</body>
+</html>
